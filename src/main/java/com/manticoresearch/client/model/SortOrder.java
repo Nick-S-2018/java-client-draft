@@ -36,7 +36,7 @@ import com.manticoresearch.client.JSON;
 })
 @JsonTypeName("sortOrder")
 @JsonIgnoreProperties(ignoreUnknown = true)
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-17T15:23:31.423902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-17T15:53:07.663175Z[Etc/UTC]")
 public class SortOrder {
   public static final String JSON_PROPERTY_ATTR = "attr";
   private String attr;

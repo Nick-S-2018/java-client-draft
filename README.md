@@ -1,10 +1,12 @@
 # manticoresearch
 
+❗ WARNING: this is a development version of the client. The latest release's readme is https://github.com/manticoresoftware/manticoresearch-java/tree/3.3.0
+
 Manticore Search Client
 
-- API version: 1.0.0
+- API version: 3.3.0
 
-- Build date: 2023-04-17T15:23:31.423902Z[Etc/UTC]
+- Build date: 2023-04-17T15:53:07.663175Z[Etc/UTC]
 
 Low-level client for Manticore Search.
 
@@ -44,7 +46,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.manticoresearch</groupId>
   <artifactId>manticoresearch</artifactId>
-  <version>3.2.0</version>
+  <version>3.3.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -60,7 +62,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.manticoresearch:manticoresearch:3.2.0"
+     implementation "com.manticoresearch:manticoresearch:3.3.0"
   }
 ```
 
@@ -74,7 +76,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/manticoresearch-3.2.0.jar`
+- `target/manticoresearch-3.3.0.jar`
 - `target/lib/*.jar`
 
 ## Usage
