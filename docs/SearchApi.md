@@ -165,6 +165,8 @@ public class SearchApiExample {
 ```
 
 ### SearchRequest
+
+[[Detailed information on search options]](https://manual.manticoresearch.com/Searching/Options#Search-options)
 ```java
 
 searchRequest.setIndex("movies");
@@ -191,6 +193,8 @@ System.out.println( searchResponse.toString() );
 ### SourceByRules
 
 [[SourceByRules]](SourceByRules.md)
+
+[[Detailed information on the `source` property]](https://manual.manticoresearch.com/Searching/Search_results#Source-selection)
 ```java
 //Setting the `Source` property with an auxiliary object:
 List<String> includes = Arrays.asList("title", "year");
@@ -220,6 +224,8 @@ System.out.println( searchResponse.toString() );
 
 [[SortOrder]](SortOrder.md)
 [[SortMVA]](SortMVA.md)
+
+[[Detailed information on sorting]](https://manual.manticoresearch.com/Searching/Sorting_and_ranking#HTTP)
 ```java
 //Setting the `Sort` property with an auxiliary object:
 List<Object> sort = new ArrayList<Object>();
@@ -238,10 +244,11 @@ searchRequest.setSort(sort);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on sorting see https://manual.manticoresearch.com/Searching/Sorting_and_ranking#HTTP
 ```
 
 ### Expressions
+
+[[Detailed information on expressions]](https://manual.manticoresearch.com/Searching/Expressions#Expressions-in-HTTP-JSON)
 ```java    
 //Setting the `expressions` property:
 Map<String,String> expr = new HashMap<String,String>();
@@ -258,12 +265,13 @@ searchRequest.setExpressions(expressions);
 					        	
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on expressions see https://manual.manticoresearch.com/Searching/Expressions#Expressions-in-HTTP-JSON
 ```
 
 ### Aggregation
 
 [[Aggregation]](Aggregation.md)
+
+[[Detailed information on aggregations](https://manual.manticoresearch.com/Searching/Faceted_search#Aggregations)
 ```java    
 //Setting the `aggs` property with an auxiliary object:
 Aggregation agg = new Aggregation();
@@ -281,12 +289,13 @@ searchRequest.setAggs(aggs);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on aggregations see https://manual.manticoresearch.com/Searching/Faceted_search#Aggregations
 ```
 
 ### Highlight
 
 [[Highlight]](Highlight.md)
+
+[[Detailed information on highlighting]](https://manual.manticoresearch.com/Searching/Highlighting#Highlighting)
 ```java
 //Settting the `highlight` property with an auxiliary object:
 Highlight highlight = new Highlight();
@@ -298,12 +307,13 @@ searchRequest.setHighlight(highlight);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on highlighting see https://manual.manticoresearch.com/Searching/Highlighting#Highlighting
 ```
 
 #### HighlightField
 
 [[HighlightField]](HighlightField.md)
+
+[[Detailed information on highlighting]](https://manual.manticoresearch.com/Searching/Highlighting#Highlighting)
 ```java
 // settting `highlight.fields` property with an auxiliary HighlightField object
 HighlightField highlightField = new HighlightField();
@@ -315,11 +325,12 @@ searchRequest.setHighlight(highlight);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on highlighting see https://manual.manticoresearch.com/Searching/Highlighting#Highlighting
 ```
 
 ### FulltextFilter
 #### QueryFilter
+
+[[Detailed information on fulltext filters]](https://manual.manticoresearch.com/Searching/Full_text_matching/Basic_usage#HTTP)
 
 [[QueryFilter]](QueryFilter.md)
 ```java    
@@ -332,7 +343,6 @@ searchRequest.setFulltextFilter(queryFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on fulltext filters see https://manual.manticoresearch.com/Searching/Full_text_matching/Basic_usage#HTTP
 ```
 
 #### MatchFilter
@@ -347,7 +357,6 @@ searchRequest.setFulltextFilter(matchFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on fulltext filters see https://manual.manticoresearch.com/Searching/Full_text_matching/Basic_usage#HTTP
 ```
 
 #### MatchPhraseFilter
@@ -362,7 +371,6 @@ searchRequest.setFulltextFilter(matchPhraseFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on fulltext filters see https://manual.manticoresearch.com/Searching/Full_text_matching/Basic_usage#HTTP
 ```
 
 #### MatchOpFilter
@@ -378,7 +386,6 @@ searchRequest.setFulltextFilter(matchOpFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on fulltext filters see https://manual.manticoresearch.com/Searching/Full_text_matching/Basic_usage#HTTP
 ```    
 
 
@@ -386,6 +393,8 @@ System.out.println( searchResponse.toString() );
 #### EqualsFilter
 
 [[EqualsFilter]](EqualsFilter.md)
+
+[[Detailed information on equality filters]](https://manual.manticoresearch.com/Searching/Filters#Equality-filters)
 ```java
 //Setting the `AttrFilter` property using different attribute filter objects:
 
@@ -397,12 +406,13 @@ searchRequest.setAttrFilter(equalsFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on equality filters see https://manual.manticoresearch.com/Searching/Filters#Equality-filters
 ```
 
 #### InFilter
 
 [[InFilter]](InFilter.md)
+
+[[Detailed information on set filters]](https://manual.manticoresearch.com/Searching/Filters#Set-filters)
 ```java
 //Using InFilter object
 InFilter inFilter = new InFilter();
@@ -412,12 +422,13 @@ searchRequest.setAttrFilter(inFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on set filters see https://manual.manticoresearch.com/Searching/Filters#Set-filters
 ```
 
 #### RangeFilter
 
 [[RangeFilter]](RangeFilter.md)
+
+[[Detailed information on range filters]](https://manual.manticoresearch.com/Searching/Filters#Range-filters)
 ```java
 //Using a RangeFilter object
 RangeFilter rangeFilter = new RangeFilter();
@@ -428,12 +439,13 @@ searchRequest.setAttrFilter(rangeFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on range filters see https://manual.manticoresearch.com/Searching/Filters#Range-filters
 ```
 
 #### GeoDistanceFilter
 
 [[GeoDistanceFilter]](GeoDistanceFilter.md)
+
+[[Detailed information on geo distance filters]](https://manual.manticoresearch.com/Searching/Filters#Geo-distance-filters)
 ```java
 //Using a GeoDistanceFilter object
 searchRequest.setIndex("geo");
@@ -449,12 +461,13 @@ geoFilter.setDistance("100km");
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on geo distance filters see https://manual.manticoresearch.com/Searching/Filters#Geo-distance-filters	
 ```
 
 #### BoolFilter
 
 [[BoolFilter]](BoolFilter.md)
+
+[[Detailed information on Bool queries]](https://manual.manticoresearch.com/Searching/Filters#bool-query)
 ```java
 //Setting the `AttrFilter` property using a bool filter object:
 searchRequest.setIndex("movies");
@@ -502,7 +515,6 @@ searchRequest.setAttrFilter(boolFilter);
 
 SearchResponse searchResponse = searchApi.search(searchRequest);
 System.out.println( searchResponse.toString() );
-//For detailed information on Bool queries see https://manual.manticoresearch.com/Searching/Filters#bool-query
 ```
 
 ### Parameters
